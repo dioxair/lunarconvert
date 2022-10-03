@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Lunar Convert</title>
-	<link href="/public/styling.css" rel="stylesheet" type="text/css" />
-	<script defer src="/public/app.js"></script>
-</head>
-
-<body>
-	<h1>Lunar Convert</h1>
-</body>
-
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Lunar Convert</title>
+      <link href="/public/styling.css" rel="stylesheet" type="text/css" />
+      <script defer src="/public/app.js"></script>
+   </head>
+   <body>
+      <h1>Lunar Convert</h1>
+      <input type="file" accept="video/*" id="fileUpload" required>
+      <p>Format to convert to:</p>
+      <select id="convertVideoFormat">
+         <option value="mp4" selected>MP4</option>
+         <option value="avi">AVI</option>
+         <option value="flv">FLV</option>
+         <option value="gif">GIF</option>
+         <option value="mov">MOV</option>
+      </select>
+      <button id="convertButton">
+      Convert Video
+      </button>
+      <button style="display: none;">
+      Convert Another Video Again
+      </button>
+   </body>
 </html>
