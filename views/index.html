@@ -9,7 +9,10 @@
    </head>
    <body>
       <h1>Lunar Convert</h1>
-      <input type="file" accept="video/*" id="fileUpload" required>
+      <div id="fileUploadDiv">
+				<input type="file" accept="video/*" id="fileUpload" required>
+		 		<label for="file">Select file</label>
+			</div>
       <p>Format to convert to:</p>
       <select id="convertVideoFormat">
          <option value="mp4" selected>MP4</option>
