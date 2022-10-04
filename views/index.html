@@ -10,21 +10,25 @@
    <body>
       <h1>Lunar Convert</h1>
       <div id="fileUploadDiv">
-				<input type="file" accept="video/*" id="fileUpload" required>
-		 		<label for="fileUpload">Select file</label>
-			</div>
+         <input type="file" accept="video/*" id="fileUpload" required>
+         <label for="fileUpload">Select file</label>
+      </div>
       <p>Format to convert to:</p>
-      <select id="convertVideoFormat">
-         <option value="mp4" selected>MP4</option>
-         <option value="avi">AVI</option>
-         <option value="flv">FLV</option>
-         <option value="gif">GIF</option>
-         <option value="mov">MOV</option>
-      </select>
+      <div class="dropdown">
+         <button class="dropbtn">Formats:</button>
+         <div class="dropdown-content">
+            <a href="#">MP4</a>
+            <a href="#">AVI</a>
+            <a href="#">FLV</a>
+            <a href="#">GIF</a>
+            <a href="#">MOV</a>
+         </div>
+      </div>
+      <p>&nbsp;</p>
       <button id="convertButton">
       Convert Video
       </button>
-		  <p>&nbsp;</p>
-		  <button id="downloadButton">Download converted file</button>
+      <p>&nbsp;</p>
+      <button id="downloadButton">Download converted file</button>
    </body>
 </html>
