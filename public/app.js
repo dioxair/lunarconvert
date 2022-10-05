@@ -31,6 +31,10 @@ const transcode = async ({
 	console.log(vidURL);
 	preview.src = vidURL;
 	downloadButton.disabled = false;
-	downloadButton.onclick = function() { saveAs(vidURL, "output.mp4") };
+	downloadButton.onclick = function() {
+    let str = String(vidURL);
+    str = str.slice(42) // get's the blob name
+    saveAs(vidURL, `${str}.mp4`)
+	};
 }
 file.addEventListener("change", transcode);
