@@ -49,6 +49,9 @@
      cursor: pointer;
      transition: all 500ms;
 }
+ button:disabled {
+     opacity: 0.5;
+}
  button:hover, button:focus {
      transform: translateY(-2px) scale(1.06);
 }
@@ -104,3 +107,4 @@
  .dropdown:hover .dropdown-content {
      display: block;
 }
+ 
