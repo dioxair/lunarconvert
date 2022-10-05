@@ -6,7 +6,7 @@ const ffmpeg = createFFmpeg({ log: false });
 
 ffmpeg.setLogger(({ type, message }) => {
 	progress.style.display = "block";
-	process.style.color = "crimson";
+	progress.style.color = "crimson";
   progress.textContent = `TYPE: ${type} - OUTPUT: ${message}`;
 });
 
