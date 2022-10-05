@@ -34,6 +34,22 @@ app.get("/", (req, res) => {
 	res.sendFile(`${__dirname}/views/index.html`);
 });
 
+app.get("/avi", (req, res) => {
+	res.sendFile(`${__dirname}/views/avi.html`);
+});
+
+app.get("/flv", (req, res) => {
+	res.sendFile(`${__dirname}/views/flv.html`);
+});
+
+app.get("/gif", (req, res) => {
+	res.sendFile(`${__dirname}/views/gif.html`);
+});
+
+app.get("/mov", (req, res) => {
+	res.sendFile(`${__dirname}/views/mov.html`);
+});
+
 app.use("/public", express.static(__dirname + "/public"));
 
 const PORT = process.env.PORT || 8080;
