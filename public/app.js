@@ -1,7 +1,14 @@
 const { createFFmpeg, fetchFile } = FFmpeg;
 const file = document.getElementById("fileUpload");
-const preview = document.getElementById("preview")
-const ffmpeg = createFFmpeg({ log: true });
+const preview = document.getElementById("preview");
+const progress = document.getElementById("progress");
+const ffmpeg = createFFmpeg({ log: false });
+
+ffmpeg.setLogger(({ type, message }) => {
+	progress.style.display = "block";
+	process.style.color = "crimson";
+  progress.textContent = `TYPE: ${type} - OUTPUT: ${message}`;
+});
 
 const transcode = async ({
 	target: {
