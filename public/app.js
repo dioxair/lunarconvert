@@ -19,7 +19,9 @@ const transcode = async ({
 	const {
 		name
 	} = files[0];
-	await ffmpeg.load();
+	if (ffmpeg.isLoaded() === false) {
+		await ffmpeg.load();
+	}
 	ffmpeg.FS("writeFile", name, await fetchFile(files[0]));
 	await ffmpeg.run("-i", name, "output.mp4");
 	const data = ffmpeg.FS("readFile", "output.mp4");
