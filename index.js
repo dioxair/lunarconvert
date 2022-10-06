@@ -50,6 +50,10 @@ app.get("/mov", (req, res) => {
 	res.sendFile(`${__dirname}/views/mov.html`);
 });
 
+app.get("/mkv", (req, res) => {
+	res.sendFile(`${__dirname}/views/mkv.html`);
+});
+
 app.use("/public", express.static(__dirname + "/public"));
 
 const PORT = process.env.PORT || 8080;

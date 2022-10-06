@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width">
       <title>Lunar Convert</title>
       <link href="/public/styling.css" rel="stylesheet" type="text/css" />
-      <script defer src="/public/mp4.js"></script>
+      <script defer src="/public/mkv.js"></script>
 		  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.5/dist/ffmpeg.min.js"></script>
 		 	<script src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js@master/src/FileSaver.js"></script>
    </head>
@@ -20,17 +20,16 @@
       <div class="dropdown">
          <button class="dropbtn">Formats:</button>
          <div class="dropdown-content">
-            <a href="#">MP4</a>
+            <a href="/">MP4</a>
             <a href="avi">AVI</a>
-            <a href="flv">FLV</a>
+            <a href="mov">FLV</a>
             <a href="gif">GIF</a>
             <a href="mov">MOV</a>
-					 	<a href="mkv">MKV</a>
+					 	<a href="#">MKV</a>
          </div>
       </div>
       <p>&nbsp;</p>
       <button disabled=true id="downloadButton">Download converted file</button>
 		 	<p>&nbsp;</p>
-		 	<video id="preview" controls></video>
    </body>
 </html>
