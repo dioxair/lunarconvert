@@ -34,5 +34,6 @@ const transcode = async ({
     str = str.slice(42) // get's the blob name
     saveAs(vidURL, `${str}.mkv`)
 	};
+	progress.textContent = "Conversion is done!";
 }
 file.addEventListener("change", transcode);

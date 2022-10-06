@@ -7,7 +7,7 @@ const ffmpeg = createFFmpeg({ log: false });
 ffmpeg.setLogger(({ type, message }) => {
 	progress.style.display = "block";
 	progress.style.color = "khaki";
-  progress.textContent = `OUTPUT: ${message}`;
+	progress.textContent = `OUTPUT: ${message}`;
 });
 
 const transcode = async ({
@@ -30,9 +30,10 @@ const transcode = async ({
 	console.log(vidURL);
 	downloadButton.disabled = false;
 	downloadButton.onclick = function() {
-    let str = String(vidURL);
-    str = str.slice(42) // get's the blob name
-    saveAs(vidURL, `${str}.avi`)
+		let str = String(vidURL);
+		str = str.slice(42) // get's the blob name
+		saveAs(vidURL, `${str}.avi`)
 	};
+	progress.textContent = "Conversion is done!";
 }
 file.addEventListener("change", transcode);
