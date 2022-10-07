@@ -34,6 +34,10 @@ app.get("/", (req, res) => {
 	res.sendFile(`${__dirname}/views/index.html`);
 });
 
+app.get("/mp3", (req, res) => {
+	res.sendFile(`${__dirname}/views/mp3.html`);
+});
+
 app.get("/avi", (req, res) => {
 	res.sendFile(`${__dirname}/views/avi.html`);
 });
