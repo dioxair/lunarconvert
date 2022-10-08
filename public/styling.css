@@ -78,3 +78,15 @@ button:focus {
   gap: 35px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
+
+.credit {
+  position: relative;
+}
+
+.creditText {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
