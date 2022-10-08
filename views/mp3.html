@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>Lunar Convert</title>
-      <link href="/public/styling.css" rel="stylesheet" type="text/css" />
-      <script defer src="/public/mp3.js"></script>
-		  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.5/dist/ffmpeg.min.js"></script>
-		 	<script src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js@master/src/FileSaver.js"></script>
-   </head>
-   <body>
-      <h1>Lunar Convert</h1>
-      <div id="fileUploadDiv">
-         <input type="file" accept="video/*" id="fileUpload" required>
-         <label for="fileUpload">Select file</label>
-      </div>
-		 	<p style="display: none;" id="progress"></p>
-      <p>Format to convert to:</p>
-		<button onclick="toggle()" id="toggleButton">Show formats</button>
-      <p>&nbsp;</p>
-      <p style="display: none;" id="videoCategoryLabel">Video</p>
-      <div class="formatsGrid">
-         <a id="formatButton" href="/">MP4</a>
-         <a id="formatButton" href="avi">AVI</a>
-         <a id="formatButton" href="flv">FLV</a>
-         <a id="formatButton" href="gif">GIF</a>
-         <a id="formatButton" href="mov">MOV</a>
-         <a id="formatButton" href="mkv">MKV</a>
-      </div>
-      <p style="display: none;" id="audioCategoryLabel">Audio</p>
-      <div class="formatsGrid">
-         <a id="formatButton" href="#">MP3</a>
-      </div>
-      <p>&nbsp;</p>
-      <button disabled=true id="downloadButton">Download converted file</button>
-		 	<p>&nbsp;</p>
-		 	<audio controls id="preview"></audio>
-   </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Lunar Convert</title>
+    <link href="/public/styling.css" rel="stylesheet" type="text/css" />
+    <script defer src="/public/mp3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.5/dist/ffmpeg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js@master/src/FileSaver.js"></script>
+  </head>
+  <body>
+    <h1>Lunar Convert</h1>
+    <div id="fileUploadDiv">
+      <input type="file" accept="video/*" id="fileUpload" required />
+      <label for="fileUpload">Select file</label>
+    </div>
+    <p style="display: none" id="progress"></p>
+    <p>Format to convert to:</p>
+    <button onclick="toggle()" id="toggleButton">Show formats</button>
+    <p>&nbsp;</p>
+    <p style="display: none" id="videoCategoryLabel">Video</p>
+    <div class="formatsGrid">
+      <a id="formatButton" href="/">MP4</a>
+      <a id="formatButton" href="avi">AVI</a>
+      <a id="formatButton" href="flv">FLV</a>
+      <a id="formatButton" href="gif">GIF</a>
+      <a id="formatButton" href="mov">MOV</a>
+      <a id="formatButton" href="mkv">MKV</a>
+    </div>
+    <p style="display: none" id="audioCategoryLabel">Audio</p>
+    <div class="formatsGrid">
+      <a id="formatButton" href="#">MP3</a>
+    </div>
+    <p>&nbsp;</p>
+    <button disabled="true" id="downloadButton">Download converted file</button>
+    <p>&nbsp;</p>
+    <audio controls id="preview"></audio>
+  </body>
 </html>
