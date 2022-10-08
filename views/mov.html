@@ -17,17 +17,20 @@
       </div>
 		 	<p style="display: none;" id="progress"></p>
       <p>Format to convert to:</p>
-      <div class="dropdown">
-         <button class="dropbtn">Formats:</button>
-         <div class="dropdown-content">
-            <a href="/">MP4</a>
-					 	<a href="mp3">MP3</a>
-            <a href="avi">AVI</a>
-            <a href="mov">FLV</a>
-            <a href="gif">GIF</a>
-            <a href="#">MOV</a>
-					 	<a href="mkv">MKV</a>
-         </div>
+      <button onclick="toggle()" id="toggleButton">Show formats</button>
+      <p>&nbsp;</p>
+      <p style="display: none;" id="videoCategoryLabel">Video</p>
+      <div class="formatsGrid">
+         <a id="formatButton" href="/">MP4</a>
+         <a id="formatButton" href="avi">AVI</a>
+         <a id="formatButton" href="flv">FLV</a>
+         <a id="formatButton" href="gif">GIF</a>
+         <a id="formatButton" href="#">MOV</a>
+         <a id="formatButton" href="mkv">MKV</a>
+      </div>
+      <p style="display: none;" id="audioCategoryLabel">Audio</p>
+      <div class="formatsGrid">
+         <a id="formatButton" href="mp3">MP3</a>
       </div>
       <p>&nbsp;</p>
       <button disabled=true id="downloadButton">Download converted file</button>

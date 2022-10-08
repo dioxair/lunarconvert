@@ -3,7 +3,37 @@ const file = document.getElementById("fileUpload");
 const progress = document.getElementById("progress");
 const downloadButton = document.getElementById("downloadButton");
 const ffmpeg = createFFmpeg({ log: false });
-
+let formatGridDisplayVideo = document.getElementsByClassName("formatsGrid")[0];
+let formatGridDisplayAudio = document.getElementsByClassName("formatsGrid")[1];
+let toggleButton = document.getElementById("toggleButton");
+let videoCategoryLabel = document.getElementById("videoCategoryLabel");
+let audioCategoryLabel = document.getElementById("audioCategoryLabel");
+function toggle() {
+	switch (formatGridDisplayVideo.style.display && formatGridDisplayAudio.style.display) {
+		case "none": {
+			formatGridDisplayVideo.style.display = "grid";
+			formatGridDisplayAudio.style.display = "grid";
+			videoCategoryLabel.style.display = "block";
+			audioCategoryLabel.style.display = "block";
+			toggleButton.textContent = "Hide formats";
+			break;
+		}
+		case "grid":
+			formatGridDisplayVideo.style.display = "none";
+			formatGridDisplayAudio.style.display = "none";
+			videoCategoryLabel.style.display = "none";
+			audioCategoryLabel.style.display = "none";
+			toggleButton.textContent = "Show formats";
+			break;
+		default:
+			formatGridDisplayVideo.style.display = "grid";
+			formatGridDisplayAudio.style.display = "grid";
+			videoCategoryLabel.style.display = "block";
+			audioCategoryLabel.style.display = "block";
+			toggleButton.textContent = "Hide formats";
+			break;
+	}
+}
 ffmpeg.setLogger(({ type, message }) => {
 	progress.style.display = "block";
 	progress.style.color = "khaki";
