@@ -62,6 +62,10 @@ app.get("/mkv", (req, res) => {
   res.sendFile(`${__dirname}/views/mkv.html`);
 });
 
+app.get("/ogg", (req, res) => {
+  res.sendFile(`${__dirname}/views/ogg.html`);
+});
+
 app.use("/public", express.static(__dirname + "/public"));
 
 const PORT = process.env.PORT || 8080;
