@@ -35,35 +35,39 @@ app.use(function logger(req, res, next) {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(`${__dirname}/views/index.html`);
+  res.sendFile(`${__dirname}/views/video/index.html`);
 });
 
-app.get("/mp3", (req, res) => {
-  res.sendFile(`${__dirname}/views/mp3.html`);
+app.get("/video/mp4", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/index.html`);
 });
 
-app.get("/avi", (req, res) => {
-  res.sendFile(`${__dirname}/views/avi.html`);
+app.get("/audio/mp3", (req, res) => {
+  res.sendFile(`${__dirname}/views/audio/mp3.html`);
 });
 
-app.get("/flv", (req, res) => {
-  res.sendFile(`${__dirname}/views/flv.html`);
+app.get("/video/avi", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/avi.html`);
 });
 
-app.get("/gif", (req, res) => {
-  res.sendFile(`${__dirname}/views/gif.html`);
+app.get("/video/flv", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/flv.html`);
 });
 
-app.get("/mov", (req, res) => {
-  res.sendFile(`${__dirname}/views/mov.html`);
+app.get("/video/gif", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/gif.html`);
 });
 
-app.get("/mkv", (req, res) => {
-  res.sendFile(`${__dirname}/views/mkv.html`);
+app.get("/video/mov", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/mov.html`);
 });
 
-app.get("/ogg", (req, res) => {
-  res.sendFile(`${__dirname}/views/ogg.html`);
+app.get("/video/mkv", (req, res) => {
+  res.sendFile(`${__dirname}/views/video/mkv.html`);
+});
+
+app.get("/audio/ogg", (req, res) => {
+  res.sendFile(`${__dirname}/views/audio/ogg.html`);
 });
 
 app.use("/public", express.static(__dirname + "/public"));
